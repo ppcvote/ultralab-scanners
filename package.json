@@ -1,7 +1,7 @@
 {
   "name": "ultralab-scanners",
   "version": "1.0.0",
-  "description": "Zero-dependency AI security, SEO, and AEO scanners. Pure TypeScript, no API calls, $0 cost.",
+  "description": "Zero-dependency TypeScript scanners for SEO, AEO (AI search optimization), and LLM prompt security. No API calls, no headless browser, < 50ms, $0 cost.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": ["dist"],
@@ -12,7 +12,7 @@
   "keywords": [
     "seo", "aeo", "ai-security", "prompt-injection", "scanner",
     "llm-security", "answer-engine-optimization", "html-parser",
-    "zero-dependency", "owasp-llm"
+    "zero-dependency", "owasp-llm", "chatgpt", "perplexity", "ai-search", "prompt-defense", "seo-audit", "content-optimization"
   ],
   "author": "Ultra Lab <hello@ultralab.tw>",
   "license": "MIT",
