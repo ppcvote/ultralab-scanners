@@ -316,9 +316,9 @@ for (const [name, prompt] of Object.entries(prompts)) {
 
 ## Powers UltraProbe
 
-These scanners are the deterministic engine behind [UltraProbe](https://ultralab.tw/probe), a production scanner used by 7,500+ monthly users across 23 countries. UltraProbe has two core modes: **Website Scan** (SEO + AEO combined into an AI Visibility Score) and **Prompt Security** (12 attack vectors). Both powered by this library. UltraProbe adds a Gemini LLM layer on top for deep analysis, but the first pass �X the one that runs in milliseconds and costs nothing �X is this library.
+These scanners are the deterministic engine behind [UltraProbe](https://ultralab.tw/en/probe), a production scanner used by 7,500+ monthly users across 23 countries. UltraProbe has two core modes: **Website Scan** (SEO + AEO combined into an AI Visibility Score) and **Prompt Security** (12 attack vectors). Both powered by this library. UltraProbe adds a Gemini LLM layer on top for deep analysis, but the first pass �X the one that runs in milliseconds and costs nothing �X is this library.
 
-Try it live: **[ultralab.tw/probe](https://ultralab.tw/probe)**
+Try it live: **[ultralab.tw/en/probe](https://ultralab.tw/en/probe)**
 
 ---
 
@@ -372,4 +372,4 @@ No test framework yet �X this is a great first contribution.
 
 ---
 
-Built by [Ultra Lab](https://ultralab.tw). The same scanners that power [UltraProbe](https://ultralab.tw/probe).
+Built by [Ultra Lab](https://ultralab.tw/en/). The same scanners that power [UltraProbe](https://ultralab.tw/en/probe).
