@@ -2,6 +2,10 @@
 
 **Zero-dependency TypeScript scanners for SEO, AEO, and AI prompt security.**
 
+> **Superseded by [ultraprobe](https://github.com/ppcvote/ultraprobe).** This repo is no longer updated. The same scanners now ship in `ultraprobe` (CLI + SDK, 25 prompt-defense vectors, SEO + AEO + AAO), installable with `npm install ultraprobe`. New issues and pull requests go there.
+>
+> **已由 [ultraprobe](https://github.com/ppcvote/ultraprobe) 取代。** 本 repo 不再更新，掃描器已整合進 `ultraprobe`（CLI＋SDK、25 防禦向量、SEO＋AEO＋AAO），用 `npm install ultraprobe` 安裝。新的 issue 與 PR 請開在那裡。
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)](package.json)
