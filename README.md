@@ -18,11 +18,11 @@
 
 Every SEO tool out there costs money, requires API keys, or spins up a headless browser. We needed scanners that are:
 
-- **$0 cost** �X no API calls, no LLM inference, no external services
-- **Zero dependencies** �X pure TypeScript, nothing to install besides this package
-- **Blazing fast** �X prompt scanner < 5ms, SEO/AEO scanners < 50ms on any HTML
-- **Deterministic** �X same input, same output, every time. No AI hallucinations.
-- **Privacy-first** �X your HTML and prompts never leave your machine
+- **$0 cost** — no API calls, no LLM inference, no external services
+- **Zero dependencies** — pure TypeScript, nothing to install besides this package
+- **Blazing fast** — prompt scanner < 5ms, SEO/AEO scanners < 50ms on any HTML
+- **Deterministic** — same input, same output, every time. No AI hallucinations.
+- **Privacy-first** — your HTML and prompts never leave your machine
 
 And one thing nobody else does: **AEO (Answer Engine Optimization)**. There is no other open-source tool that checks whether your content is optimized for AI search engines like ChatGPT, Perplexity, Gemini, and Grok. We built it because we needed it. Now you can have it too.
 
@@ -43,6 +43,8 @@ And one thing nobody else does: **AEO (Answer Engine Optimization)**. There is n
 ---
 
 ## Quick Start
+
+> `ultralab-scanners` was never published to npm, so the install line below does not work. It is kept for reference. For a working install use `npm install ultraprobe`, or clone this repo and run `npm run build`.
 
 ```bash
 npm install ultralab-scanners
@@ -69,7 +71,7 @@ console.log(defense.score, defense.coverage) // 8, '1/12'
 
 ## Three Scanners
 
-### 1. SEO Scanner �X 30+ checks across 8 categories
+### 1. SEO Scanner — 30+ checks across 8 categories
 
 Pure HTML parsing. No headless browser. No Lighthouse. Just feed it HTML and a URL.
 
@@ -121,11 +123,11 @@ for (const cat of result.categories) {
 }
 ```
 
-### 2. AEO Scanner �X 32 checks across 8 categories
+### 2. AEO Scanner — 32 checks across 8 categories
 
 **This is the one nobody else has.**
 
-AEO (Answer Engine Optimization) analyzes whether AI search engines �X ChatGPT Search, Perplexity, Google AI Overview, Grok �X can understand, extract, and cite your content. Traditional SEO gets you into Google's index. AEO gets you into AI-generated answers.
+AEO (Answer Engine Optimization) analyzes whether AI search engines — ChatGPT Search, Perplexity, Google AI Overview, Grok — can understand, extract, and cite your content. Traditional SEO gets you into Google's index. AEO gets you into AI-generated answers.
 
 **Categories:**
 
@@ -160,11 +162,11 @@ for (const f of failures) {
 }
 ```
 
-**Why AEO matters:** If your content scores poorly on AEO, AI search engines will cite your competitors instead of you �X even if your traditional SEO is perfect. AEO is the new battleground.
+**Why AEO matters:** If your content scores poorly on AEO, AI search engines will cite your competitors instead of you — even if your traditional SEO is perfect. AEO is the new battleground.
 
-### 3. Prompt Defense Scanner �X 12 attack vectors, pure regex, < 5ms
+### 3. Prompt Defense Scanner — 12 attack vectors, pure regex, < 5ms
 
-Audits LLM system prompts for missing security defenses. Not an attack detector �X it checks whether your prompt has guards against each known attack class.
+Audits LLM system prompts for missing security defenses. Not an attack detector — it checks whether your prompt has guards against each known attack class.
 
 **Attack vectors checked:**
 
@@ -273,7 +275,7 @@ Prompt defense output:
 
 ## Use Cases
 
-**CI/CD pipeline** �X fail builds when SEO/AEO scores drop below a threshold:
+**CI/CD pipeline** — fail builds when SEO/AEO scores drop below a threshold:
 
 ```typescript
 import { runSeoScan, runAeoScan } from 'ultralab-scanners'
@@ -287,7 +289,7 @@ if (seo.score < 70) throw new Error(`SEO score ${seo.score} below threshold`)
 if (aeo.score < 50) throw new Error(`AEO score ${aeo.score} below threshold`)
 ```
 
-**Bulk content audit** �X scan every page on your site:
+**Bulk content audit** — scan every page on your site:
 
 ```typescript
 import { runAeoScan } from 'ultralab-scanners'
@@ -301,7 +303,7 @@ for (const path of urls) {
 }
 ```
 
-**LLM prompt security review** �X audit prompts before production:
+**LLM prompt security review** — audit prompts before production:
 
 ```typescript
 import { runDeterministicScan } from 'ultralab-scanners'
@@ -320,7 +322,7 @@ for (const [name, prompt] of Object.entries(prompts)) {
 
 ## Powers UltraProbe
 
-These scanners are the deterministic engine behind [UltraProbe](https://ultralab.tw/en/probe), a production scanner used by 7,500+ monthly users across 23 countries. UltraProbe has two core modes: **Website Scan** (SEO + AEO combined into an AI Visibility Score) and **Prompt Security** (12 attack vectors). Both powered by this library. UltraProbe adds a Gemini LLM layer on top for deep analysis, but the first pass �X the one that runs in milliseconds and costs nothing �X is this library.
+These scanners are the deterministic engine behind [UltraProbe](https://ultralab.tw/en/probe), a production scanner used by 7,500+ monthly users across 23 countries. UltraProbe has two core modes: **Website Scan** (SEO + AEO combined into an AI Visibility Score) and **Prompt Security** (12 attack vectors). Both powered by this library. UltraProbe adds a Gemini LLM layer on top for deep analysis, but the first pass — the one that runs in milliseconds and costs nothing — is this library.
 
 Try it live: **[ultralab.tw/en/probe](https://ultralab.tw/en/probe)**
 
@@ -355,10 +357,10 @@ Same shape as `SeoScanOutput`. 8 AEO-specific categories.
 
 Contributions are welcome. Some areas where help is especially appreciated:
 
-- **New AEO checks** �X AI search is evolving fast. If you spot a new ranking signal, open a PR.
-- **Prompt defense vectors** �X new attack classes appear regularly. Add regex patterns for detection.
-- **Language support** �X currently English + Traditional Chinese. More languages = more useful.
-- **Benchmarks** �X real-world performance data across different HTML sizes.
+- **New AEO checks** — AI search is evolving fast. If you spot a new ranking signal, open a PR.
+- **Prompt defense vectors** — new attack classes appear regularly. Add regex patterns for detection.
+- **Language support** — currently English + Traditional Chinese. More languages = more useful.
+- **Benchmarks** — real-world performance data across different HTML sizes.
 
 ```bash
 git clone https://github.com/ppcvote/ultralab-scanners.git
@@ -366,13 +368,13 @@ cd ultralab-scanners
 npm run build
 ```
 
-No test framework yet �X this is a great first contribution.
+No test framework yet — this is a great first contribution.
 
 ---
 
 ## License
 
-[MIT](https://opensource.org/licenses/MIT) �X use it however you want.
+[MIT](https://opensource.org/licenses/MIT) — use it however you want.
 
 ---
 
